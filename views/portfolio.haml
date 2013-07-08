@@ -1,0 +1,121 @@
+#wrap
+  .container
+    .page-header
+      =haml :menu
+      %h1 Portfolio
+    .row
+      %h1{:align => "center"} Still working on
+      .span8.offset2
+        %hr
+        %ul.breadcrumb
+          %li.active{"data-language" => "all"}
+            All
+            %span.divider
+            |
+          %li{"data-language" => "java"}
+            Java
+            %span.divider
+            |
+          %li{"data-language" => "csharp"}
+            C#
+            %span.divider
+            |
+          %li{"data-language" => "ruby"}
+            Ruby
+            %span.divider
+            |
+          %li{"data-language" => "frontend"}
+            HTML + CSS + Javascript
+            %span.divider
+            |
+          %li{"data-language" => "php"}
+            PHP
+            %span.divider
+            |
+          %li{"data-language" => "rails"}
+            Ruby on Rails
+            %span.divider
+            |
+          %li{"data-language" => "bash"}
+            BASH
+            %span.divider
+            |
+          %li{"data-language" => "other"} Other
+    .span8.offset2
+      .row
+        %ul.thumbnails
+          %li.span4{"data-language" => "java"}
+            .hover-div
+              %a.thumbnail{:href => "#"}
+                %img{:alt => "", :src => "images/thumbnails/videoadmin.png"}
+              %span.hover-text
+                %p VideoAdmin
+          %li.span4{"data-language" => "java"}
+            .hover-div
+              %a.thumbnail{:href => "#"}
+                %img{:alt => "", :src => "images/thumbnails/sharealla.png"}
+              %span.hover-text
+                %p Sharealla
+      .row
+        %ul.thumbnails
+          %li.span4{"data-language" => "java"}
+            .hover-div
+              %a.thumbnail{:href => "#"}
+                %img{:alt => "", :src => "images/thumbnails/scolarship.png"}
+              %span.hover-text
+                %p Scolarship Unit
+          %li.span4{"data-language" => "bash"}
+            .hover-div
+              %a.thumbnail{:href => "#"}
+                %img{:alt => "", :src => "images/thumbnails/260x180.gif"}
+              %span.hover-text
+                %a{:href => "#"}
+                %p LTSP3
+      .row
+        %ul.thumbnails
+          %li.span4{"data-language" => "frontend"}
+            .hover-div
+              %a.thumbnail{:href => "#"}
+                %img{:alt => "", :src => "images/thumbnails/html5.png"}
+              %span.hover-text
+                %p HTML5 training
+          %li.span4{"data-language" => "other"}
+            .hover-div
+              %a.thumbnail{:href => "#"}
+                %img{:alt => "", :src => "images/thumbnails/NWN.png"}
+              %span.hover-text
+                %p NWN module
+      .row
+        %ul.thumbnails
+          %li.span4{"data-language" => "csharp"}
+            .hover-div
+              %a.thumbnail{:href => "#"}
+                %img{:alt => "", :src => "images/thumbnails/260x180.gif"}
+              %span.hover-text
+                %p Memorama
+          %li.span4{"data-language" => "csharp"}
+            .hover-div
+              %a.thumbnail{:href => "#"}
+                %img{:alt => "", :src => "images/thumbnails/crosswords.png"}
+              %span.hover-text
+                %p Cross Words
+      .row
+        %ul.thumbnails
+          %li.span4{"data-language" => "csharp"}
+            .hover-div
+              %a.thumbnail{:href => "#"}
+                %img{:alt => "", :src => "images/thumbnails/todolist.png"}
+              %span.hover-text
+                %p ToDo list
+          %li.span4{"data-language" => "php"}
+            .hover-div
+              %a.thumbnail{:href => "#"}
+                %img{:alt => "", :src => "images/thumbnails/eventosHG.png"}
+              %span.hover-text
+                %p Eventos HG (Hacker Garage)
+  #push
+=haml :footer
+%script{:src => "javascript/jquery-1.9.1.min.js"}
+%script{:src => "javascript/bootstrap.min.js"}
+%script{:src => "javascript/select_menu.js"}
+%script{:src => "javascript/toogle_thumbnails.js"}

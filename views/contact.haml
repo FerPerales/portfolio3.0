@@ -1,0 +1,45 @@
+#wrap
+  .container
+    .page-header
+      =haml :menu
+      %h1 Contact
+    .row
+      .span8.offset2
+        = display_email_notice
+        %form.form-horizontal{:action => "/contact", :method => "post"}
+          %fieldset
+            / Form Name
+            %legend{:align => 'center'} Feel free to drop me a line
+            / Text input
+            .control-group
+              %label.control-label Name
+              .controls
+                %input#name.input-xlarge{:name => "name", :placeholder => "Name", :required => "", :type => "text"}
+            / Text input
+            .control-group
+              %label.control-label Your email
+              .controls
+                %input#email.input-xlarge{:name => "email", :placeholder => "example@mail.com", :required => "", :type => "text"}
+            / Select Basic
+            .control-group
+              %label.control-label Subject
+              .controls
+                %select#subject.input-xlarge{:name => "subject"}
+                  %option Say hi!
+                  %option Information
+                  %option Let's do bussiness!
+                  %option Give a talk for us
+                  %option Other
+            / Textarea
+            .control-group
+              %label.control-label Message
+              .controls
+                %textarea#message.input-xlarge{:name => "message"}
+            / Button
+            .control-group
+              %label.control-label
+              .controls
+                %button#singlebutton.btn.btn-default{:name => "singlebutton"} Send
+
+  #push
+=haml :footer

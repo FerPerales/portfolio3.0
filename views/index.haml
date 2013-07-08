@@ -1,0 +1,36 @@
+#wrap
+  .container
+    .page-header
+      = haml :menu
+      %h1 Fer Perales
+    .span8.offset2
+      %h2{:align => "center"} About me
+      .row
+        .span4
+          %img{:alt => "8 bits me", :src => "images/yo.png"}
+        .span4
+          %script{:src => "//about.me/embed/ferperales?image=0&name=0&apps=0&style=site"}
+      %hr/
+      %section
+        %h2.centered-text What I'm doing
+        %p Some of the things I've been working on in the last months are:
+        %ul
+          %li
+            %a{:href => "http://github.com/FerPerales/fancy-explorer"} Fancy explorer
+            A ruby-based file explorer to make mananing your files funnier than ever!
+            %span.label.label-success New
+          %li
+            %a{:href => "https://github.com/FerPerales/RailsDO-list"} A ToDo list
+            \- Ruby on Rails
+          %li
+            %a{:href => "https://github.com/FerPerales/store"} Store:
+            a project started in the Ruby on Rails bootcamp by Crowd Interactive - Ruby on Rails
+          %li
+            %a{:href => "http://songfly.me/"} Songfly.me
+            \- a collaborative social platform in which users from all around the world can upload their tracks, share them with other users and together they can create a brand new song. I'm working in both the front and the back-end
+  #push
+
+= haml :footer
+%script{:src => "javascript/jquery-1.9.1.min.js"}
+%script{:src => "javascript/bootstrap.min.js"}
+%script{:src => "javascript/select_menu.js"}

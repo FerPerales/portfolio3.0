@@ -1,0 +1,36 @@
+#wrap
+  .container
+    .page-header
+      =haml :menu
+      %h1 Blog
+    .row
+      .span8.offset2
+        %h2{:align => 'center'} Blog post
+        .row
+          .span8
+            I have a
+            %a{:href => "http://blog.ferperales.net"} blog
+            written mostly in Spanish where I write about technology, programming, designer, startups, music and more.
+            %p
+              I have also written some blogpost for
+              %a{:href => "http://blog.crowdint.com/", :target => '_blank'} Crowd interactive tech blog.
+              / and
+              / %a{:href => "http://rails.mx/blog", :target => '_blank'} Ruby on Rails mexican community,
+            %hr
+            %h5{:align => "center"} Latest entry from Crowd Interactive blog
+            #crowdint-feeds
+              %a.crowdint-feed{:href => "http://www.feedrinse.com/services/channel/?chanurl=1d5e522935d82b9acc5489db9c8c9aee"}
+            %h5{:align => "center"} Latest entry from my personal blog
+            #personal-feeds
+              %a.personal-feed{:href => "http://blog.ferperales.net/feed"}
+            / %h5{:align => "center"} Latest entries from RailsMX blog
+            / #railsmx-feeds
+            / %a.railsmx-feed{:href => "http://blog.ferperales.net/feed"}
+  #push
+=haml :footer
+%script{:src => "javascript/jquery-1.9.1.min.js"}
+%script{:src => "javascript/bootstrap.min.js"}
+%script{:src => "javascript/select_menu.js"}
+%script{:src => "http://www.google.com/jsapi"}
+%script{:src => "javascript/jquery.gfeed.js"}
+%script{:src => "javascript/rss_feed.js"}

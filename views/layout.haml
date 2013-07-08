@@ -1,0 +1,16 @@
+!!!5
+%html{lang: "en"}
+  %head
+    %meta{content: "width=device-width, initial-scale=1.0 maximum-scale=1.0", name: "viewport"}
+    = haml :metas
+    %title= @title
+    %link{:href => "stylesheet/bootstrap.min.css", :rel => "stylesheet"}
+    %link{:href => "stylesheet/font-awesome.min.css", :rel => "stylesheet"}
+    %link{:href => "stylesheet/font-awesome-social.css", :rel => "stylesheet"}
+    %link{:href => "stylesheet/font-awesome-ext.css", :rel => "stylesheet"}
+    %link{:href => "stylesheet/footer.css", :rel => "stylesheet"}
+    %link{:href => "stylesheet/gallery.css", :rel => "stylesheet"}
+    %link{:href => "stylesheet/style.css", :rel => "stylesheet"}
+  %body
+    = haml :tracking
+    = yield

@@ -1,0 +1,271 @@
+#wrap
+  .container
+    .page-header
+      = haml :menu
+      %h1 Résumé
+    .row
+      .pull-right
+        Download
+        %a#downloads-counter{:href => "cv"}
+          %i.icon-adobe-pdf
+        %small
+          |
+          = cv_downloads
+    .row
+      .span8.offset2
+        .row
+          .span4.pull-left
+            %p
+            %h2
+              %i.icon-user
+              Personal information
+            %p
+              %i.icon-calendar
+              October 17th, 1989
+            %p
+              %i.icon-map-marker
+              Colima, Colima, Mexico
+            %p
+              %i.icon-envelope-alt
+              %img{:alt => "me@thisdomain", :src => "images/gmail.png"}/
+            %p
+              %i.icon-phone-sign
+              33 1088 5718
+            %p
+              %i.icon-skype
+              %a{:href => "skype:ferperalesm?chat"} FerPeralesM
+          .span4.pull-right
+            %p
+            %h2
+              Social
+              %i.icon-comments-alt
+            %p
+              %a{:href => "http://ferperales.net"} ferperales.net
+              %i.icon-home
+            %p
+              %a{:href => "http://blog.ferperales.net", :target => "_blank"} blog.ferperales.net
+              %i.icon-rss
+            %p
+              %a{:href => "http://linkedin.com/in/FerPerales", :target => "_blank"} linkedin.com/in/FerPerales
+              %i.icon-linkedin
+            %p
+              %a{:href => "http://github.com/FerPerales", :target => "_blank"} github.com/FerPerales
+              %i.icon-github-alt
+            %p
+              %a{:href => "http://twitter.com/FerPeralesM", :target => "_blank"} @FerPeralesM
+              %i.icon-twitter
+        %hr/
+        #accordion2.accordion
+          .accordion-group
+            .accordion-heading
+              %a.accordion-toggle{"data-parent" => "#accordion2", "data-toggle" => "collapse", :href => "#collapseOne"}
+                %h3.centered-text
+                  %i.icon-book
+                  Academic formation
+                  %i.icon-book
+            #collapseOne.accordion-body.collapse.in
+              .accordion-inner
+                %h4.centered-text University of Guadalajara – University Center of Exact Sciences and Engineering (CUCEI)
+                %p
+                  B. Cs. Computer Engineering
+                %p
+                  2008 - 2012
+                %h4.centered-text Instituto Cultural Mexicano-Norteamericano de Jalisco
+                %p
+                  Basic program of English for Adults (1 year)
+                %p
+                  Proficiency program of English for Adults (1 year)
+                %p
+                  Teacher Training Program (1 year)
+          .accordion-group
+            .accordion-heading
+              %a.accordion-toggle{"data-parent" => "#accordion2", "data-toggle" => "collapse", :href => "#collapseTwo"}
+                %h3{:align => "center"}
+                  %i.icon-cog
+                  Technical experience*
+                  %i.icon-cog
+            #collapseTwo.accordion-body.collapse
+              .accordion-inner
+                .row
+                  .span3.pull-left
+                    %h4 Programming languages
+                    %ul
+                      %li
+                        Java
+                      %li
+                        C
+                      %li
+                        C#
+                      %li
+                        Python
+                      %li
+                        Ruby
+                    %h4 Web development
+                    %ul
+                      %li
+                        HTML5
+                      %li
+                        CSS3
+                      %li
+                        JavaScript
+                      %li
+                        PHP
+                      %li
+                        Ajax
+                  .span3.pull-right
+                    %h4 Mobile development
+                    %ul.right-bullet{:dir => "rtl"}
+                      %li
+                        Android
+                    %h4 Frameworks, APIs and other tools
+                    %ul.right-bullet{:dir => "rtl"}
+                      %li
+                        JDBC/ODBC
+                      %li
+                        Foundation and Bootstrap
+                      %li
+                        jQuery
+                      %li
+                        jasperReports
+                      %li
+                        Drupal/Wordpress
+                      %li
+                        backbone.js, knockout.js and sammy.js
+                      %li
+                        node.js
+                      %li
+                        Twitter API PHP
+                    %p.text-info
+                      *(Descending order of experience)
+                .row
+                  .span8
+                    %h4 Extras
+                    %ul
+                      %li
+                        Databases (mySQL, postgreSQL and BD2)
+                      %li
+                        CASE tools (DIA, mySQL Workbench)
+                      %li
+                        Mockup tools (Pencil, Balsamiq mockups)
+                      %li
+                        IDEs/text editors (Eclipse, AptanaStudio, SharpDevelop, Codeblock, SublimeText, vim)
+                      %li
+                        Scripting (basic knowledge of CMD and BASH)
+                      %li
+                        CVS (git)
+                      %li
+                        Deployment (Heroku, FTP)
+          .accordion-group
+            .accordion-heading
+              %a.accordion-toggle{"data-parent" => "#accordion2", "data-toggle" => "collapse", :href => "#collapseThree"}
+                %h3{:align => "center"}
+                  %i.icon-trophy
+                  Certificacions and diplomas
+                  %i.icon-trophy
+            #collapseThree.accordion-body.collapse
+              .accordion-inner
+                %ul
+                  %li
+                    IBM BD2 Certified Academic Associate
+                  %li
+                    ICMNJ Certified Teacher Training Program
+                  %li
+                    Microsoft HTML5 & Internet Explorer 9 Developer Fundamentals
+                  %li
+                    Oracle Certified Java Programmer
+          .accordion-group
+            .accordion-heading
+              %a.accordion-toggle{"data-parent" => "#accordion2", "data-toggle" => "collapse", :href => "#collapseFour"}
+                %h3.centered-text
+                  %i.icon-briefcase
+                  Professional experience
+                  %i.icon-briefcase
+            #collapseFour.accordion-body.collapse
+              .accordion-inner
+                %h4{:align => "center"} Crowd Interactive
+                %p
+                  Ruby on Rails trainee
+                %p
+                  Feb 2013 - Actual
+          .accordion-group
+            .accordion-heading
+              %a.accordion-toggle{"data-parent" => "#accordion2", "data-toggle" => "collapse", :href => "#collapseFive"}
+                %h3{:align => "center"}
+                  %i.icon-wrench
+                  Latest projects
+                  %i.icon-wrench
+            #collapseFive.accordion-body.collapse
+              .accordion-inner
+                .span3.pull-left
+                  %h4 Online event registration platform for Hacker Garage
+                  Skills/technologies/languages used:
+                  %ul
+                    %li
+                      HTML5/CSS3
+                    %li
+                      JavaScript
+                    %li
+                      jQuery
+                    %li
+                      MySQL
+                    %li
+                      PHP
+                  %p
+                    Participation: complete development (along with 2 friends)
+                  %p
+                    Duration: September 2012 – December 2012
+                .span3.pull-right
+                  %h4 Control system for the Scholarship department for C.U.C.E.I.
+                  Skills/technologies/languages used:
+                  %ul.right-bullet{:dir => "rtl"}
+                    %li
+                      Java
+                    %li
+                      WindowBuilder
+                    %li
+                      jasperReports
+                    %li
+                      JDBC
+                    %li
+                      PostgreSQL
+                  %p
+                    Participation: complete development
+                  %p
+                    Duration: March 2011 – November 2011
+          .accordion-group
+            .accordion-heading
+              %a.accordion-toggle{"data-parent" => "#accordion2", "data-toggle" => "collapse", :href => "#collapseSix"}
+                %h3{:align => "center"}
+                  %i.icon-certificate
+                  Workshops and talks given
+                  %i.icon-certificate
+            #collapseSix.accordion-body.collapse
+              .accordion-inner
+                %h4.centered-text DIVECFest 2012 – Universidad de Guadalajara – CUCEI
+                %ul
+                  %li
+                    Workshop: Desarrollo de aplicaciones móviles con Phonegap (Mobile application development with Phonegap) (4 hours)
+                  %li
+                    Talk: Introducción a bases de datos noSQL (Introduction to noSQL databases) (1 hour)
+                  %li
+                    Talk: Piensa y emprende: introducción a la metodología Lean Startup (Think and startup: introduction to Lean Startup methodology) (1 hour)
+                %h4.centered-text 2do encuentro estudiantil Ingenieros al ataque – Centro del Software
+                %ul
+                  %li
+                    Informal talk: Introducción a Lean Startup (Introduction to Lean Startup) (1 hour)
+                %h4.centered-text DIVECFest 2013 – Universidad de Guadalajara – CUCEI
+                %ul
+                  %li Workshop: Fundamentos de Ruby / Ruby on Rails (Ruby / Ruby on Rails fundaments) (3 hours)
+                  %li Talk: Terminé la universidad: ¿ahora qué hago? (I finished university: now what I do?) (1 hour)
+                %h4.centered-text Railsbridge MX - Crowd Interactive
+                %ul
+                  %li Teacher assitant in the first mexican RailsBridge organized by Crowd Interactive and Desi McAdam from Thoughtbot as teacher - (3 hours installFest, 7 hours workshop)
+                %h4.centered-text MagmaConf 2013 - Universidad de Colima - Campus 'El naranjo'
+                %ul
+                  %li Lightnight talk: From just graduated to just hired (5 minutes)
+  #push
+= haml :footer
+%script{:src => "javascript/jquery-1.9.1.min.js"}
+%script{:src => "javascript/bootstrap.min.js"}
+%script{:src => "javascript/select_menu.js"}
+%script{:src => "javascript/counter.js"}
