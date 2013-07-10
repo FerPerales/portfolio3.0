@@ -24,16 +24,9 @@ get '/portfolio' do
 end
 
 get '/cv' do
-	counter_file_path = File.join 'public', 'count.txt'
-	counter_file = File.open(counter_file_path, "r+") do |file|
-	  num = file.gets.to_i || 0
-	  file.rewind
-	  file.puts num.next
-	end
 
-	file_path = File.join(
-		'public', 'docs', 'CV Fernando Perales_en.pdf'
-	)
+	increase_counter
+	file_path = get_cv_file
 	send_file file_path, :disposition => 'attachment'
 end
 
@@ -86,26 +79,41 @@ helpers do
 	def cv_downloads
 		counter_file_path = File.join 'public', 'count.txt'
 		counter_file = File.open counter_file_path do |file|
-		  counter = file.gets.to_i
-		  file.close
+			counter = file.gets.to_i
+			file.close
 			counter
 		end
-		"<i class='icon-download'></i> <small><span class='download-count'>#{counter_file}</span> #{pluralize('time', counter_file)}</small>"
+	"<i class='icon-download'></i> <small><span class='download-count'>#{counter_file}</span> #{pluralize('time', counter_file)}</small>"
 	end
 
-  def pluralize(base_string, n)
+	def pluralize(base_string, n)
 		base_string += (n != 1 ? 's' : '')
-  end
+	end
 
-  def display_email_notice
+	def display_email_notice
 		message = session[:mail_confirmation]
 		if message
 			session[:mail_confirmation] = nil
 			"<div class='alert alert-success'>
 			<button type='button' class='close' data-dismiss='alert'>&times;</button>
-				#{message}
+			#{message}
 			</div>"
 		end
-  end
+	end
 
+end
+
+:private
+
+def increase_counter
+	counter_file_path = File.join 'public', 'count.txt'
+	counter_file = File.open(counter_file_path, "r+") do |file|
+	  num = file.gets.to_i || 0
+	  file.rewind
+	  file.puts num.next
+	end
+end
+
+def get_cv_file
+	File.join('public', 'docs', 'CV Fernando Perales_en.pdf')
 end
