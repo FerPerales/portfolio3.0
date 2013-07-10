@@ -8,32 +8,33 @@
 (function($) {
 
 if (!window.google)  {
-    alert('You must include the Google AJAX Feed API script');
+    console.log('You must include the Google AJAX Feed API script');
     return;
-}    
+} else {
 
-if (!google.feeds) google.load("feeds", "1");
+    if (!google.feeds) google.load("feeds", "1");
 
-$.fn.gFeed = function(options) {
-    var opts = jQuery.extend({
-        target: this,
-        max:   5   // max number of items per feed
-    }, options || {});
-    
-    var g = new google.feeds.FeedControl();
+    $.fn.gFeed = function(options) {
+        var opts = jQuery.extend({
+            target: this,
+            max:   5   // max number of items per feed
+        }, options || {});
+        
+        var g = new google.feeds.FeedControl();
 
-    this.each(function() {
-        var url = this.href || opts.url;
-        var title = opts.title || this.title || $(this).text();
-        g.addFeed(url, title);
-        g.setNumEntries(opts.max);
-    });
-    
-    $(opts.target).each(function() {
-        g.draw(this, opts.tabs ? { drawMode: google.feeds.FeedControl.DRAW_MODE_TABBED } : null );
-    });
-    
-    return this;
-};
+        this.each(function() {
+            var url = this.href || opts.url;
+            var title = opts.title || this.title || $(this).text();
+            g.addFeed(url, title);
+            g.setNumEntries(opts.max);
+        });
+        
+        $(opts.target).each(function() {
+            g.draw(this, opts.tabs ? { drawMode: google.feeds.FeedControl.DRAW_MODE_TABBED } : null );
+        });
+        
+        return this;
+    };
+}
 
 })(jQuery);
