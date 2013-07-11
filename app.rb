@@ -83,7 +83,7 @@ helpers do
 			file.close
 			counter
 		end
-	"<i class='icon-download'></i> <small><span class='download-count'>#{counter_file}</span> #{pluralize('time', counter_file)}</small>"
+		"<i class='icon-download'></i> <small><span class='download-count'>#{counter_file}</span> #{pluralize('time', counter_file)}</small>"
 	end
 
 	def pluralize(base_string, n)
