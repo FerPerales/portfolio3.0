@@ -48,12 +48,12 @@ end
 post '/contact' do
 	Pony.mail(
 		:from    => params[:name] + '<' + params[:email] + '>',
-		:to      => 'fer.perales.montoya@gmail.com',
+		:to      => 'me@ferperales.net',
 		:subject => params[:name] + ' <' + params[:email] + '> contacted you: ' + params[:subject],
 		:body    => params[:message],
 		:port    => '587',
 		:via     => :smtp,
-    :via_options => {
+	    :via_options => {
 			:address              => 'smtp.gmail.com',
 			:port                 => '587',
 			:enable_starttls_auto => true,
@@ -61,10 +61,10 @@ post '/contact' do
 			:password             => ENV['PASSWORD'],
 			:authentication       => :plain,
 			:domain               => 'gmail.com'
-    }
-  )
+	    }
+	)
 	session[:mail_confirmation] = "Thanks! I'll mail you back in less than 24 hours"
-  redirect '/contact'
+	redirect '/contact'
 end
 
 not_found do
