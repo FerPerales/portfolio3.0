@@ -72,6 +72,7 @@ not_found do
 	haml :not_found
 end
 
+run Sinatra::Application.run!
 # Helpers
 
 helpers do
@@ -117,3 +118,4 @@ end
 def get_cv_file
 	File.join('public', 'docs', 'CV Fernando Perales_en.pdf')
 end
+
